@@ -119,5 +119,15 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\imagenbtbarCopiar.png" />
+    <Content Include="Imagenes\imagenbtbarCortar.png" />
+    <Content Include="Imagenes\imagenbtbarDeshacer.png" />
+    <Content Include="Imagenes\imagenbtbarPegar.png" />
+    <Content Include="Imagenes\imagenEdicionCopiar.png" />
+    <Content Include="Imagenes\imagenEdicionCortar.png" />
+    <Content Include="Imagenes\imagenEdicionDeshacer.png" />
+    <Content Include="Imagenes\imagenEdicionPegar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
