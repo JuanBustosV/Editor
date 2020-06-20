@@ -25,21 +25,21 @@ Partial Class Editor
         Me.BarraDeEstado = New System.Windows.Forms.StatusStrip()
         Me.BarraDeMenu = New System.Windows.Forms.MenuStrip()
         Me.menuArchivo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BarraDeHerramientas = New System.Windows.Forms.ToolStrip()
-        Me.menuEdicion = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuOpciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArchivoSalir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuEdicion = New System.Windows.Forms.ToolStripMenuItem()
         Me.EdicionCortar = New System.Windows.Forms.ToolStripMenuItem()
         Me.EdicionCopiar = New System.Windows.Forms.ToolStripMenuItem()
         Me.EdicionPegar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuOpciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpcionesFuente = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpcionesTam = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpFuCourierNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpFuArial = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpFuPredeterminada = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpcionesTam = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpTam16 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpTam24 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpTamPredeterminado = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarraDeHerramientas = New System.Windows.Forms.ToolStrip()
         Me.btbarCortar = New System.Windows.Forms.ToolStripButton()
         Me.btbarCopiar = New System.Windows.Forms.ToolStripButton()
         Me.btbarPegar = New System.Windows.Forms.ToolStripButton()
@@ -71,14 +71,11 @@ Partial Class Editor
         Me.menuArchivo.Size = New System.Drawing.Size(60, 20)
         Me.menuArchivo.Text = "&Archivo"
         '
-        'BarraDeHerramientas
+        'ArchivoSalir
         '
-        Me.BarraDeHerramientas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btbarCortar, Me.btbarCopiar, Me.btbarPegar})
-        Me.BarraDeHerramientas.Location = New System.Drawing.Point(0, 24)
-        Me.BarraDeHerramientas.Name = "BarraDeHerramientas"
-        Me.BarraDeHerramientas.Size = New System.Drawing.Size(800, 25)
-        Me.BarraDeHerramientas.TabIndex = 5
-        Me.BarraDeHerramientas.Text = "ToolStrip1"
+        Me.ArchivoSalir.Name = "ArchivoSalir"
+        Me.ArchivoSalir.Size = New System.Drawing.Size(96, 22)
+        Me.ArchivoSalir.Text = "&Salir"
         '
         'menuEdicion
         '
@@ -86,19 +83,6 @@ Partial Class Editor
         Me.menuEdicion.Name = "menuEdicion"
         Me.menuEdicion.Size = New System.Drawing.Size(58, 20)
         Me.menuEdicion.Text = "&Edición"
-        '
-        'menuOpciones
-        '
-        Me.menuOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesFuente, Me.OpcionesTam})
-        Me.menuOpciones.Name = "menuOpciones"
-        Me.menuOpciones.Size = New System.Drawing.Size(69, 20)
-        Me.menuOpciones.Text = "&Opciones"
-        '
-        'ArchivoSalir
-        '
-        Me.ArchivoSalir.Name = "ArchivoSalir"
-        Me.ArchivoSalir.Size = New System.Drawing.Size(180, 22)
-        Me.ArchivoSalir.Text = "&Salir"
         '
         'EdicionCortar
         '
@@ -127,19 +111,19 @@ Partial Class Editor
         Me.EdicionPegar.Size = New System.Drawing.Size(180, 22)
         Me.EdicionPegar.Text = "&Pegar"
         '
+        'menuOpciones
+        '
+        Me.menuOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesFuente, Me.OpcionesTam})
+        Me.menuOpciones.Name = "menuOpciones"
+        Me.menuOpciones.Size = New System.Drawing.Size(69, 20)
+        Me.menuOpciones.Text = "&Opciones"
+        '
         'OpcionesFuente
         '
         Me.OpcionesFuente.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpFuCourierNew, Me.OpFuArial, Me.OpFuPredeterminada})
         Me.OpcionesFuente.Name = "OpcionesFuente"
         Me.OpcionesFuente.Size = New System.Drawing.Size(180, 22)
         Me.OpcionesFuente.Text = "&Fuente"
-        '
-        'OpcionesTam
-        '
-        Me.OpcionesTam.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpTam16, Me.OpTam24, Me.OpTamPredeterminado})
-        Me.OpcionesTam.Name = "OpcionesTam"
-        Me.OpcionesTam.Size = New System.Drawing.Size(180, 22)
-        Me.OpcionesTam.Text = "&Tamaño"
         '
         'OpFuCourierNew
         '
@@ -159,6 +143,13 @@ Partial Class Editor
         Me.OpFuPredeterminada.Size = New System.Drawing.Size(180, 22)
         Me.OpFuPredeterminada.Text = "Predeterminada"
         '
+        'OpcionesTam
+        '
+        Me.OpcionesTam.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpTam16, Me.OpTam24, Me.OpTamPredeterminado})
+        Me.OpcionesTam.Name = "OpcionesTam"
+        Me.OpcionesTam.Size = New System.Drawing.Size(180, 22)
+        Me.OpcionesTam.Text = "&Tamaño"
+        '
         'OpTam16
         '
         Me.OpTam16.Name = "OpTam16"
@@ -176,6 +167,15 @@ Partial Class Editor
         Me.OpTamPredeterminado.Name = "OpTamPredeterminado"
         Me.OpTamPredeterminado.Size = New System.Drawing.Size(180, 22)
         Me.OpTamPredeterminado.Text = "Predeterminado"
+        '
+        'BarraDeHerramientas
+        '
+        Me.BarraDeHerramientas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btbarCortar, Me.btbarCopiar, Me.btbarPegar})
+        Me.BarraDeHerramientas.Location = New System.Drawing.Point(0, 24)
+        Me.BarraDeHerramientas.Name = "BarraDeHerramientas"
+        Me.BarraDeHerramientas.Size = New System.Drawing.Size(800, 25)
+        Me.BarraDeHerramientas.TabIndex = 5
+        Me.BarraDeHerramientas.Text = "ToolStrip1"
         '
         'btbarCortar
         '
