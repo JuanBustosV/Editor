@@ -44,6 +44,7 @@ Partial Class Editor
         Me.btbarCopiar = New System.Windows.Forms.ToolStripButton()
         Me.btbarPegar = New System.Windows.Forms.ToolStripButton()
         Me.ctEditor = New System.Windows.Forms.TextBox()
+        Me.EdicionDeshacer = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraDeMenu.SuspendLayout()
         Me.BarraDeHerramientas.SuspendLayout()
         Me.SuspendLayout()
@@ -79,7 +80,7 @@ Partial Class Editor
         '
         'menuEdicion
         '
-        Me.menuEdicion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EdicionCortar, Me.EdicionCopiar, Me.EdicionPegar})
+        Me.menuEdicion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EdicionDeshacer, Me.EdicionCortar, Me.EdicionCopiar, Me.EdicionPegar})
         Me.menuEdicion.Name = "menuEdicion"
         Me.menuEdicion.Size = New System.Drawing.Size(58, 20)
         Me.menuEdicion.Text = "&Edición"
@@ -122,50 +123,50 @@ Partial Class Editor
         '
         Me.OpcionesFuente.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpFuCourierNew, Me.OpFuArial, Me.OpFuPredeterminada})
         Me.OpcionesFuente.Name = "OpcionesFuente"
-        Me.OpcionesFuente.Size = New System.Drawing.Size(180, 22)
+        Me.OpcionesFuente.Size = New System.Drawing.Size(116, 22)
         Me.OpcionesFuente.Text = "&Fuente"
         '
         'OpFuCourierNew
         '
         Me.OpFuCourierNew.Name = "OpFuCourierNew"
-        Me.OpFuCourierNew.Size = New System.Drawing.Size(180, 22)
+        Me.OpFuCourierNew.Size = New System.Drawing.Size(158, 22)
         Me.OpFuCourierNew.Text = "Courier New"
         '
         'OpFuArial
         '
         Me.OpFuArial.Name = "OpFuArial"
-        Me.OpFuArial.Size = New System.Drawing.Size(180, 22)
+        Me.OpFuArial.Size = New System.Drawing.Size(158, 22)
         Me.OpFuArial.Text = "Arial"
         '
         'OpFuPredeterminada
         '
         Me.OpFuPredeterminada.Name = "OpFuPredeterminada"
-        Me.OpFuPredeterminada.Size = New System.Drawing.Size(180, 22)
+        Me.OpFuPredeterminada.Size = New System.Drawing.Size(158, 22)
         Me.OpFuPredeterminada.Text = "Predeterminada"
         '
         'OpcionesTam
         '
         Me.OpcionesTam.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpTam16, Me.OpTam24, Me.OpTamPredeterminado})
         Me.OpcionesTam.Name = "OpcionesTam"
-        Me.OpcionesTam.Size = New System.Drawing.Size(180, 22)
+        Me.OpcionesTam.Size = New System.Drawing.Size(116, 22)
         Me.OpcionesTam.Text = "&Tamaño"
         '
         'OpTam16
         '
         Me.OpTam16.Name = "OpTam16"
-        Me.OpTam16.Size = New System.Drawing.Size(180, 22)
+        Me.OpTam16.Size = New System.Drawing.Size(159, 22)
         Me.OpTam16.Text = "16"
         '
         'OpTam24
         '
         Me.OpTam24.Name = "OpTam24"
-        Me.OpTam24.Size = New System.Drawing.Size(180, 22)
+        Me.OpTam24.Size = New System.Drawing.Size(159, 22)
         Me.OpTam24.Text = "24"
         '
         'OpTamPredeterminado
         '
         Me.OpTamPredeterminado.Name = "OpTamPredeterminado"
-        Me.OpTamPredeterminado.Size = New System.Drawing.Size(180, 22)
+        Me.OpTamPredeterminado.Size = New System.Drawing.Size(159, 22)
         Me.OpTamPredeterminado.Text = "Predeterminado"
         '
         'BarraDeHerramientas
@@ -216,6 +217,14 @@ Partial Class Editor
         Me.ctEditor.Size = New System.Drawing.Size(800, 379)
         Me.ctEditor.TabIndex = 6
         '
+        'EdicionDeshacer
+        '
+        Me.EdicionDeshacer.Image = Global.Editor.My.Resources.Resources.imagenEdicionDeshacer
+        Me.EdicionDeshacer.ImageTransparentColor = System.Drawing.Color.Black
+        Me.EdicionDeshacer.Name = "EdicionDeshacer"
+        Me.EdicionDeshacer.Size = New System.Drawing.Size(180, 22)
+        Me.EdicionDeshacer.Text = "&Deshacer"
+        '
         'Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,4 +267,5 @@ Partial Class Editor
     Friend WithEvents btbarCopiar As ToolStripButton
     Friend WithEvents btbarPegar As ToolStripButton
     Friend WithEvents ctEditor As TextBox
+    Friend WithEvents EdicionDeshacer As ToolStripMenuItem
 End Class
